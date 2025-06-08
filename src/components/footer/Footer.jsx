@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section >
 
-      <footer className="bg-white rounded-lg shadow-sm dark:bg-gray-800 m-4">
+      <footer className="rounded-lg shadow-sm dark:bg-gray-800 m-4">
         <div className="w-full max-w-screen-xl mx-auto p-3 md:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">
 

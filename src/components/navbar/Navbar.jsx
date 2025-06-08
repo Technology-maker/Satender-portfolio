@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 rounded-md ">
+    <nav className="border-gray-200 dark:bg-gray-900 rounded-md ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
         {/* logos  */}
