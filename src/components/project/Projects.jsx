@@ -1,4 +1,8 @@
 import React from 'react'
+import amazonimg from '../../assets/project-img/amazon-website.png'
+import Email_spamimg from '../../assets/project-img/Email-Spam-Detection.png'
+import foodimg from '../../assets/project-img/Food-delivery-app.png'
+import movieimg from '../../assets/project-img/movie-website.png'
 
 const Projects = () => {
     return (
@@ -25,7 +29,7 @@ const Projects = () => {
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
-                        <img src="../../../project-img/Food-delivery-app.png" alt="Food delivery image"
+                        <img src={foodimg} alt="Food delivery image"
                             className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white mb-2 ">Food Delivery Frontend Application</h3>
@@ -46,7 +50,7 @@ const Projects = () => {
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
-                        <img src="../../../project-img/amazon-website.png" alt="Amazon image"
+                        <img src={amazonimg} alt="Amazon image"
                             className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white mb-2">Amazon Frontend Application</h3>
@@ -67,7 +71,7 @@ const Projects = () => {
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
-                        <img src="../../../project-img/movie-website.png" alt="Movie image"
+                        <img src={movieimg} alt="Movie image"
                             className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white mb-2 transition-colors duration-300">Movie Frontend App</h3>
@@ -88,7 +92,7 @@ const Projects = () => {
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
-                        <img src="../../../project-img/Email-Spam-Detection.png" alt="Email-Spam-Detection image"
+                        <img src={Email_spamimg} alt="Email-Spam-Detection image"
                             className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white mb-2  transition-colors duration-300">Email Spam Detection Project</h3>
