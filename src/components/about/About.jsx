@@ -1,5 +1,6 @@
 import React from 'react'
 import TypeEffect from './TypeEffect'
+import mywebimg from '../../assets/my-image-logo/myimg.png'
 
 const About = () => {
   return (
@@ -29,7 +30,7 @@ const About = () => {
       {/* My Image */}
       <div className="md:w-1/2 w-full flex justify-center items-center p-4 min-h-[220px]">
         <img
-          src="../../assets/my-image-logo/mywebimg.jpg"
+          src={mywebimg}
           alt="Satender"
           className="rounded-full w-40 h-40 md:w-72 md:h-72 object-cover border-2 border-solid border-sky-400  transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105 shadow-2xl shadow-indigo-500/50 "
         />
