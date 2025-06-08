@@ -1,16 +1,21 @@
-import React from 'react'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Github, Linkedin } from 'lucide-react'; 
 
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const Navbar = () => {
+  // Function to toggle the mobile menu visibility
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="border-gray-200 dark:bg-gray-900 rounded-md ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="bg-gray-900 rounded-md shadow-lg"> {/* Added shadow for better appearance */}
+      <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
 
-        {/* logos  */}
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-          <div className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+        {/* Logo/Brand */}
+        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#8245ec]">
+          <div className="self-center text-2xl font-extrabold whitespace-nowrap text-white"> {/* Changed font-semibold to font-extrabold for stronger visual */}
             <span className="text-[#8245ec]">&lt;</span>
             <span className="text-white">Satender</span>
             <span className="text-[#8245ec]">/</span>
@@ -19,54 +24,70 @@ const Navbar = () => {
           </div>
         </a>
 
-        <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        {/* Mobile menu toggle button */}
+        <button
+          onClick={toggleMenu}
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded={isMenuOpen ? "true" : "false"} 
+        >
           <span className="sr-only">Open main menu</span>
           <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
 
-        {/* menu options   */}
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        {/* Menu options and social links */}
+        <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto transition-all duration-300 ease-in-out`} id="navbar-default">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-700 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 items-center"> {/* Added `items-center` for vertical alignment on desktop */}
 
+            {/* Navigation Links */}
             <li>
-              <a href="#about" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">About</a>
-            </li>
-
-            <li>
-              <a href="#skills" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ">Skills</a>
-            </li>
-            <li>
-              <a href="#project" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ">Project</a>
+              <a href="#about" onClick={toggleMenu} className="block py-2 px-3 text-gray-200 rounded-md hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200" aria-current="page">About</a>
             </li>
 
             <li>
-              <a href="#education" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ">Education</a>
+              <a href="#skills" onClick={toggleMenu} className="block py-2 px-3 text-gray-200 rounded-md hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Skills</a>
+            </li>
+            <li>
+              <a href="#project" onClick={toggleMenu} className="block py-2 px-3 text-gray-200 rounded-md hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Project</a>
             </li>
 
             <li>
-              <a href="#contact" className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ">Contact</a>
+              <a href="#education" onClick={toggleMenu} className="block py-2 px-3 text-gray-200 rounded-md hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Education</a>
             </li>
-            <li className=' flex  gap-3 '>
-              <a href="https://github.com/Technology-maker" target="_blank" className='block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent gap-2 text-base'><FaGithub /></a>
-              <a href="https://www.linkedin.com/in/satender-yadav-a39b622a0/" target="_blank" className='block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent gap-2 text-base' ><FaLinkedin /></a>
+
+            <li>
+              <a href="#contact" onClick={toggleMenu} className="block py-2 px-3 text-gray-200 rounded-md hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent transition-colors duration-200">Contact</a>
+            </li>
+
+            {/* Social Media Icons */}
+            <li className='flex gap-4 md:ml-4 mt-4 md:mt-0'> {/* Added margin-left for spacing on desktop, and top margin for mobile */}
+              <a
+                href="https://github.com/Technology-maker"
+                target="_blank"
+                rel="noopener noreferrer" // Good practice for target="_blank"
+                className='text-gray-300 hover:text-[#8245ec] transition-colors duration-200 text-2xl' // Increased icon size
+                aria-label="GitHub Profile"
+              >
+                <Github />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/satender-yadav-a39b622a0/"
+                target="_blank"
+                rel="noopener noreferrer" // Good practice for target="_blank"
+                className='text-gray-300 hover:text-[#8245ec] transition-colors duration-200 text-2xl' // Increased icon size
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin />
+              </a>
             </li>
           </ul>
-
         </div>
-
-        {/* github , linkedin logo   */}
-
-
-
-
-
-
       </div>
     </nav>
+  );
+};
 
-  )
-}
-
-export default Navbar
+export default App; // Export App as the default component
