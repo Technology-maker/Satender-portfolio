@@ -1,4 +1,39 @@
 import React from "react";
+import html from '../../assets/tech_logo/html.png'
+import css from '../../assets/tech_logo/css.png'
+import javascript from '../../assets/tech_logo/javascript.png'
+import reactjs from '../../assets/tech_logo/reactjs.png'
+import typescript from '../../assets/tech_logo/typescript.png'
+import tailwindcss from '../../assets/tech_logo/tailwindcss.png'
+import nodejs from '../../assets/tech_logo/nodejs.png'
+import express from '../../assets/tech_logo/express.png'
+import mysql from '../../assets/tech_logo/mysql.png'
+import mongodb from '../../assets/tech_logo/mongodb.png'
+import c from '../../assets/tech_logo/c.png'
+import cpp from '../../assets/tech_logo/cpp.png'
+import git from '../../assets/tech_logo/git.png'
+import github from '../../assets/tech_logo/github.png'
+import vscode from '../../assets/tech_logo/vscode.png'
+import postman from '../../assets/tech_logo/postman.png'
+
+const skillIcons = {
+  html,
+  css,
+  javascript,
+  reactjs,
+  typescript,
+  tailwindcss,
+  nodejs,
+  express,
+  mysql,
+  mongodb,
+  c,
+  cpp,
+  git,
+  github,
+  vscode,
+  postman,
+};
 
 const Skills = () => {
   const skillsData = [
@@ -82,7 +117,9 @@ const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
 
                     <div key={skill.name} className="group/skill flex flex-col items-center p-3 rounded-lg hover:bg-slate-100 transition-colors duration-200" style={{ animationDelay: `${skillIndex * 100}ms` }}>
-                      <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center mb-2 group-hover/skill:scale-110 transition-transform duration-200 shadow-sm"> <img src={`../../../tech_logo/${skill.icon}.png`} alt={skill.name} className="w-8 h-8 object-contain" /></div>
+                      <div className="w-12 h-12 bg-gradient-to-br from-slate-100 to-slate-200 rounded-lg flex items-center justify-center mb-2 group-hover/skill:scale-110 transition-transform duration-200 shadow-sm">
+                        <img src={skillIcons[skill.icon]} alt={skill.name} className="w-8 h-8 object-contain" />
+                      </div>
                       <span className="text-xs text-slate-600 font-medium text-center leading-tight">
                         {skill.name}
                       </span>
