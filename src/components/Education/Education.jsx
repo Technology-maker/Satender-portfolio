@@ -1,5 +1,7 @@
 import React from 'react';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import college_logo from '../../assets/Education-logo/fotor-20250607173814.jpg';
+import school_logo from '../../assets/Education-logo/school-logo.jpeg';
 
 const Education = () => {
   const educationData = [
@@ -10,7 +12,7 @@ const Education = () => {
       duration: "2024 - Present",
       location: "Gurgaon",
       description: "I am pursuing a BCA in Computer Applications from St. Andrews Institute of Technology & Management (SAITM), Gurgaon. During my time at SAITM, I have gained a strong foundation in programming, software development, and core computer science principles.",
-      image: "../../../Education-logo/fotor-20250607173814.jpg",
+      image: college_logo,
       status: "current"
     },
     {
@@ -20,7 +22,7 @@ const Education = () => {
       duration: "2022 - 2023",
       location: "RBSE Board",
       description: "I completed my class 12 education from Happy Senior Secondary School, under the RBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      image: "../../../Education-logo/school-logo.jpeg",
+      image: school_logo,
       status: "completed"
     }
   ];
@@ -61,8 +63,8 @@ const Education = () => {
                     <div className="bg-slate-300 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100">
                       {/* Status Badge */}
                       <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-4 ${education.status === 'current'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-blue-100 text-blue-800'
+                        ? 'bg-green-100 text-green-800'
+                        : 'bg-blue-100 text-blue-800'
                         }`}>
                         {education.status === 'current' ? 'Currently Pursuing' : 'Completed'}
                       </div>
