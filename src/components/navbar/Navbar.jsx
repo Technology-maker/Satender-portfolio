@@ -69,15 +69,14 @@ const App = () => {
 
             {/* download cv  */}
             <li>
-              <a href="/Satender-CV.pdf" download onClick={toggleMenu} className="flex items-center gap-1  py-2 px-3 text-gray-300 rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-slate-400 md:dark:hover:bg-transparent transition-colors duration-200" >  <MdFileDownload className="text-xl" /> <span>Download CV</span> </a>
+              <a href="/Satender-CV.pdf" download onClick={toggleMenu} className="flex items-center gap-1  py-2 px-3 text-gray-300 rounded-md md:hover:bg-transparent md:border-0 md:hover:text-[#8245ec] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-slate-400 md:dark:hover:bg-transparent transition-colors duration-200" > <MdFileDownload className="text-xl" /> <span>Download CV</span> </a>
             </li>
 
             {/* Social Media Icons */}
             <li className='flex gap-4 md:ml-4 mt-4 md:mt-0'>
               <a href="https://github.com/Technology-maker" target="_blank" rel="noopener noreferrer" className='text-gray-300 hover:text-[#8245ec] transition-colors duration-200 text-2xl'>  <Github /></a>
-              <a href="https://www.linkedin.com/in/satender-yadav-a39b622a0/" target="_blank" rel="noopener noreferrer" > <Linkedin /> </a>
+              <a href="https://www.linkedin.com/in/satender-yadav-a39b622a0/" target="_blank" rel="noopener noreferrer" className='text-gray-300 hover:text-[#8245ec] transition-colors duration-200 text-2xl' > <Linkedin /> </a>
             </li>
-
           </ul>
         </div>
       </div>
