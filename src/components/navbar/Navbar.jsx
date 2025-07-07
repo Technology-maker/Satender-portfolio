@@ -10,7 +10,7 @@ const App = () => {
   };
 
   return (
-    <nav className="bg-gray-900 rounded-md shadow-lg">
+    <nav className="bg-gray-900 rounded-md shadow-lg m-0.5 ">
       <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
 
         {/* Logo/Brand */}

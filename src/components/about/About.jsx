@@ -6,8 +6,7 @@ import { MdFileDownload } from "react-icons/md"
 const About = () => {
   return (
     <section id='about' className="py-0 flex flex-col md:flex-row items-center justify-center mt-1 bg-[#A7A2A9] rounded-md min-h-[450px]">
-
-
+      
       {/* About Me Text */}
       <div className="md:w-1/2 w-full p-4 flex items-center justify-center min-h-[220px]">
         <div className="w-full max-w-xl">

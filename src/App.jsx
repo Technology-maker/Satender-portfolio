@@ -13,16 +13,21 @@ function App() {
 
   return (
     <>
-      <div className='p-0.5'>
+      <header>
         <Navbar />
+      </header>
+
+      <main>
         <About />
         <Skills />
         <Projects />
         <Education />
         <Contact />
-        
+      </main>
+
+      <footer>
         <Footer />
-      </div>
+      </footer>
     </>
   )
 }
