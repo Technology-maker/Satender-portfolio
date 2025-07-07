@@ -18,7 +18,7 @@ const Contact = () => {
     const sendingToastId = toast.loading("Sending...");
 
     emailjs.sendForm(service_id, template_id, form.current, public_key)
-      .then((res) => {
+      .then(() => {
         toast.dismiss(sendingToastId); // Remove sending toast
         setResult("");
         setToastType("success");
