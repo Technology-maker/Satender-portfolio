@@ -3,6 +3,7 @@ import amazonimg from '../../assets/project-img/amazon-website.png'
 import Email_spamimg from '../../assets/project-img/Email-Spam-Detection.png'
 import foodimg from '../../assets/project-img/Food-delivery-app.png'
 import movieimg from '../../assets/project-img/movie-website.png'
+import AdBanner from '../ads/AdBanner'
 
 const Projects = () => {
     return (
@@ -65,6 +66,12 @@ const Projects = () => {
                             View Live
                         </a>
                     </div>
+                </div>
+
+
+                {/* Ad inserted here */}
+                <div className="col-span-full flex justify-center">
+                    <AdBanner />
                 </div>
 
                 {/* Project 3 */}
