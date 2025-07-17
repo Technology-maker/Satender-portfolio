@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /admin
+Disallow: /api
+
 Allow: /
 
 Sitemap: https://www.satenderyadav.xyz/sitemap.xml
