@@ -3,6 +3,7 @@ import amazonimg from '../../assets/project-img/amazon-website.png'
 import Email_spamimg from '../../assets/project-img/Email-Spam-Detection.png'
 import foodimg from '../../assets/project-img/Food-delivery-app.png'
 import movieimg from '../../assets/project-img/movie-website.png'
+import Aithinker from '../../assets/project-img/Screenshot 2025-08-11 100036.png'
 import AdBanner from '../ads/AdBanner'
 
 const Projects = () => {
@@ -26,7 +27,30 @@ const Projects = () => {
             {/* Projects Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4  gap-7 px-4 md:px-12">
 
+
+
                 {/* Project 1 */}
+                <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
+
+                    <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
+                        <img src={Aithinker} alt="Food delivery image"
+                            className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <h3 className="font-bold text-lg text-white mb-2 ">AI-Thinker Web Aplication</h3>
+                    <p className="text-white text-center mb-4">A powerful user-friendly Frontend + Backend Application Try it today!🚀</p>
+                    <div className="flex gap-4 mt-auto">
+                        <a href="https://github.com/Technology-maker/AiThinkr-frontend" target="_blank" rel="noopener noreferrer"
+                            className="px-4 py-1.5 rounded-full bg-[#d2ded0] text-black font-semibold shadow  transition-colors duration-200 hover:scale-105">
+                            View Code
+                        </a>
+                        <a href="https://ai-thinkr-frontend.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            className="px-4 py-1.5 rounded-full bg-[#304b3c] text-white font-semibold shadow transition-colors duration-200 hover:scale-105">
+                            View Live
+                        </a>
+                    </div>
+                </div>
+
+                {/* Project 2 */}
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
@@ -34,7 +58,7 @@ const Projects = () => {
                             className="object-cover w-full h-full rounded-lg group-hover:scale-105 transition-transform duration-300" />
                     </div>
                     <h3 className="font-bold text-lg text-white mb-2 ">Food Delivery Frontend Application</h3>
-                    <p className="text-white text-center mb-4">A powerful user-friendly React.js frontend application.</p>
+                    <p className="text-white text-center mb-4">User-Friendly React.js frontend application. which can show my skills</p>
                     <div className="flex gap-4 mt-auto">
                         <a href="https://github.com/Technology-maker/food-web-project" target="_blank" rel="noopener noreferrer"
                             className="px-4 py-1.5 rounded-full bg-[#d2ded0] text-black font-semibold shadow  transition-colors duration-200 hover:scale-105">
@@ -47,7 +71,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Project 2 */}
+                {/* Project 3 */}
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
@@ -74,7 +98,8 @@ const Projects = () => {
                     <AdBanner />
                 </div>
 
-                {/* Project 3 */}
+
+                {/* Project 4 */}
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group ">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
@@ -95,7 +120,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Project 4 */}
+                {/* Project 5 */}
                 <div className="bg-[#a7a2a9] rounded-xl shadow-2xl hover:shadow-indigo-800/95 transition-shadow duration-300 flex flex-col items-center p-6 group">
 
                     <div className="w-full h-40 flex items-center justify-center overflow-hidden rounded-lg mb-4">
