@@ -19,7 +19,7 @@ const Contact = () => {
     };
 
     try {
-      const res = await fetch("https://vercel.com/technology-makers-projects/portfolio-backend/DitfiupUsGs1gYhyiAPhkrYEftmj/api/send-message", {
+      const res = await fetch("https://portfolio-backend-phi-gilt.vercel.app/api/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
