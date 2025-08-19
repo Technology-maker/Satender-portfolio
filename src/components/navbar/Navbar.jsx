@@ -14,7 +14,7 @@ const App = () => {
       <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
 
         {/* Logo/Brand */}
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#8245ec]">
+        
           <div className="self-center text-2xl font-extrabold whitespace-nowrap text-white">
             <span className="text-[#8245ec]">&lt;</span>
             <span className="text-white">Satender</span>
@@ -22,7 +22,7 @@ const App = () => {
             <span className="text-white">Yadav</span>
             <span className="text-[#8245ec]">&gt;</span>
           </div>
-        </a>
+       
 
         {/* Mobile menu toggle button */}
         <button
