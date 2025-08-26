@@ -39,7 +39,7 @@ const Projects = () => {
                     <h3 className="font-bold text-lg text-white mb-2 ">AI-Thinker Web Aplication</h3>
                     <p className="text-white text-center mb-4">A powerful user-friendly Frontend + Backend Application Try it today!🚀</p>
                     <div className="flex gap-4 mt-auto">
-                        <a href="https://github.com/Technology-maker/AiThinkr-frontend" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.aithinkr.online/signup" target="_blank" rel="noopener noreferrer"
                             className="px-4 py-1.5 rounded-full bg-[#d2ded0] text-black font-semibold shadow  transition-colors duration-200 hover:scale-105">
                             View Code
                         </a>
